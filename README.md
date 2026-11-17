@@ -13,8 +13,8 @@ A collection of deep-learning exercises written in Python and PyTorch for the **
 
 ## Requirements
 
-- Python 3.8 or newer
-- Python packages:
+- Python 3.11.9 (pinned in `.tool-versions`; the code requires 3.8 or newer)
+- Python packages listed in `requirements.txt`:
   - `numpy`
   - `matplotlib`
   - `torch`
@@ -24,10 +24,13 @@ A collection of deep-learning exercises written in Python and PyTorch for the **
   - `scikit-image`
   - `Cython` (only needed to build the Cython extension in `cnn/`)
 
-Install them with:
+Install the pinned Python version and dependencies:
 
 ```bash
-pip install numpy matplotlib torch torchvision scikit-learn scipy scikit-image Cython
+asdf install
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 ```
 
 ## Data
